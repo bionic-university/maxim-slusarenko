@@ -1,26 +1,15 @@
 ﻿<?php
 
-interface myzok
-{
-    public function klava($level);
-    public function stryna($level);	   //інтерфейси і абстрактні класи я сам неособо знаю 
-    public function smuk($level);	  //тобі ж там шото розказували от і зробиш нормально, єслі це некатить
-}
-
-
-
-
 class myz implements myzok
 {
 
-    protected $maxLevel = 5;   //макс уровень музиканта
+    protected $maxLevel = 5;
 
-    public function __construct($name,$level)	//1 арг = імя інструмента(імя метода), 2 = уровень
+    public function __construct($name,$level)
     {
-        if(method_exists($this,$name))  //еслі введений метод існує			аргументи 1-наш обєкт, 2 - імя метода
+        if(method_exists($this,$name))
         {
-            if($level < 1 or $level > $this->maxLevel) echo "Недопустимый уровень музыканта";   //перевірка на норм діапазон значень уровня
-            else self::$name($level);   //визов заданого метода
+            if($level < 1 or $level > $this->maxLevel) echo "Недопустимый уровень музыканта";
         }
 		else echo "Заданого инструмента несуществует";
     }
@@ -44,7 +33,3 @@ class myz implements myzok
     }
 
 }
-
-
-$w = new myz('stryna',1);	//	запуск:)
-//форму вводу сам уже прикрутиш єслі нада
