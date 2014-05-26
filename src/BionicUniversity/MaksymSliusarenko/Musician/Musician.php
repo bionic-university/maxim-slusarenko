@@ -3,7 +3,12 @@
 namespace BionicUniversity\MaksymSliusarenko\Musician;
 include_once 'AbstractMusician.php';
 
-class Musician extends AbstractMusician{
+/**
+ * Class Musician
+ * @package BionicUniversity\MaksymSliusarenko\Musician
+ */
+class Musician extends AbstractMusician
+    {
 
     /**
      * @var string
@@ -13,34 +18,43 @@ class Musician extends AbstractMusician{
     //public $categoryMusician;
 
     /**
+     * @param Keyboards $keyboard
      * @param $levelMusician
-     * @param $k
+     * @param $nameMusician
      */
-    public function __construct(Keyboards $k,$levelMusician,$nameMusician)
+    public function __construct(Keyboards $keyboard,$levelMusician,$nameMusician)
     {
-        if ($levelMusician ==1 && $k->keyboard == 'Drums'){
-            echo "Drums", PHP_EOL;}
-        elseif ($levelMusician ==2 && $k->keyboard == 'Guitar'){
-            echo "Guitar", PHP_EOL;}
-        elseif ($levelMusician ==3 && $k->keyboard == 'SynthAxe'){
-            echo "SynthAxe", PHP_EOL;}
-        elseif ($levelMusician ==4 && $k->keyboard == 'Piano'){
-            echo "Piano", PHP_EOL;}
-        elseif ($levelMusician ==5 && $k->keyboard == 'Arfa'){
-            echo "Arfa", PHP_EOL;}
-        else {
-            die('Lol');
+        if ($levelMusician ==1 && $keyboard->keyboard == 'Drums'){
+            echo "Drums", PHP_EOL;
+        }
+        elseif ($levelMusician ==2 && $keyboard->keyboard == 'Guitar'){
+            echo "Guitar", PHP_EOL;
+        }
+        elseif ($levelMusician ==3 && $keyboard->keyboard == 'SynthAxe'){
+            echo "SynthAxe", PHP_EOL;
+        }
+        elseif ($levelMusician ==4 && $keyboard->keyboard == 'Piano'){
+            echo "Piano", PHP_EOL;
+        }
+        elseif ($levelMusician ==5 && $keyboard->keyboard == 'Arfa'){
+            echo "Arfa", PHP_EOL;
         }
         $this->nameMusician = $nameMusician;
         $this->levelMusician = $levelMusician;
-        $this->addKeyboards($k);
+        $this->addKeyboards($keyboard);
 
         //$this->categoryMusician = $categoryMusician;
     }
 
 
-    public function addKeyboards(Keyboards $k){
-        array_push($this->keyboards,$k);
+    /**
+     * @param Keyboards $keyboard
+     * @return $this
+     */
+    public function addKeyboards(Keyboards $keyboard)
+    {
+        array_push($this->keyboards,$keyboard);
+
         return $this;
     }
 

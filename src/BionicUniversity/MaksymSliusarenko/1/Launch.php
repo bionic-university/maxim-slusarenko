@@ -1,3 +1,3 @@
 <?php
 
-$w = new myz('stryna',1);
+$w = new myz ('stryna',1);

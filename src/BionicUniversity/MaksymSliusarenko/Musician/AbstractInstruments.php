@@ -1,7 +1,13 @@
 <?php
 
 namespace BionicUniversity\MaksymSliusarenko\Musician;
-abstract class AbstractInstruments{
+
+/**
+ * Class AbstractInstruments
+ * @package BionicUniversity\MaksymSliusarenko\Musician
+ */
+abstract class AbstractInstruments
+    {
 
     protected $categoryInstrument = '';
     protected $soundOfInstrument = '';

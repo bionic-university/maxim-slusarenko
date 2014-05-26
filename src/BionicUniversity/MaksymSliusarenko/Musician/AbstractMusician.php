@@ -1,7 +1,12 @@
 <?php
 
 namespace BionicUniversity\MaksymSliusarenko\Musician;
-abstract class AbstractMusician{
+/**
+ * Class AbstractMusician
+ * @package BionicUniversity\MaksymSliusarenko\Musician
+ */
+abstract class AbstractMusician
+    {
 
     protected $nameMusician = 'Vasya';
     /**
