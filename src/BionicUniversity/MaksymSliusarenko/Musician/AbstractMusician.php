@@ -3,10 +3,11 @@
 namespace BionicUniversity\MaksymSliusarenko\Musician;
 /**
  * Class AbstractMusician
+ *
  * @package BionicUniversity\MaksymSliusarenko\Musician
  */
 abstract class AbstractMusician
-    {
+{
 
     protected $nameMusician = 'Vasya';
     /**

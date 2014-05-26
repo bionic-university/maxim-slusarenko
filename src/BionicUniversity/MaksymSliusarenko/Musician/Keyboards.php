@@ -5,10 +5,11 @@ include_once 'AbstractInstruments.php';
 
 /**
  * Class Keyboards
+ *
  * @package BionicUniversity\MaksymSliusarenko\Musician
  */
 class Keyboards extends AbstractInstruments
-    {
+{
 
     /** типи - Ударно-клавішні,Пневматичні клавішні духові, Пневматичні клавішні язичкові інструменти,
      * Електронні клавішні музичні інструменти (синтезатори, електроорган)

@@ -5,10 +5,11 @@ include_once 'AbstractMusician.php';
 
 /**
  * Class Musician
+ *
  * @package BionicUniversity\MaksymSliusarenko\Musician
  */
 class Musician extends AbstractMusician
-    {
+{
 
     /**
      * @var string
@@ -36,9 +37,7 @@ class Musician extends AbstractMusician
         elseif ($levelMusician ==4 && $keyboard->keyboard == 'Piano'){
             echo "Piano", PHP_EOL;
         }
-        elseif ($levelMusician ==5 && $keyboard->keyboard == 'Arfa'){
-            echo "Arfa", PHP_EOL;
-        }
+
         $this->nameMusician = $nameMusician;
         $this->levelMusician = $levelMusician;
         $this->addKeyboards($keyboard);

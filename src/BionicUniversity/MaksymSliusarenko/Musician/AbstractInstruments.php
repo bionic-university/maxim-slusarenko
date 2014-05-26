@@ -4,10 +4,11 @@ namespace BionicUniversity\MaksymSliusarenko\Musician;
 
 /**
  * Class AbstractInstruments
+ *
  * @package BionicUniversity\MaksymSliusarenko\Musician
  */
 abstract class AbstractInstruments
-    {
+{
 
     protected $categoryInstrument = '';
     protected $soundOfInstrument = '';
