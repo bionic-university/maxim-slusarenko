@@ -1,0 +1,6 @@
+hr:
+    resource: "@HRBundle/Resources/config/routing.yml"
+    prefix:   /
+
+
+
