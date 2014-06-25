@@ -1,0 +1,19 @@
+{% extends 'BionicUniversityHRBundle::layout.html.twig' %}
+
+{% block content %}
+
+{% block body -%}
+    <h1>Schedule creation</h1>
+
+    {{ form(form) }}
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('schedule') }}">
+            Back to the list
+        </a>
+    </li>
+</ul>
+{% endblock %}
+
+{% endblock %}

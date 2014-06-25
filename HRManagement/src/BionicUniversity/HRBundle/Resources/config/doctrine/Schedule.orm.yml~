@@ -1,0 +1,34 @@
+BionicUniversity\HRBundle\Entity\Schedule:
+    type: entity
+    table: schedule
+    #repositoryClass: BionicUniversity\HRBundle\Entity\ProfileRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        time:
+            type: time
+            column: Time
+        date:
+            type: date
+            column: Date
+        Subject:
+            type: string
+            length: '60'
+            column: Subject
+        Group:
+            type: string
+            length: '60'
+            column: Group
+        Type:
+            type: string
+            length: '60'
+            column: Type
+
+    manyToOne:
+        profile:
+            targetEntity: BionicUniversity\HRBundle\Entity\Profile
+            inversedBy: schedules

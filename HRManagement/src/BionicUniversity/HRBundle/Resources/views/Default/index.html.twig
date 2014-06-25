@@ -1,0 +1,16 @@
+{% extends 'BionicUniversityHRBundle::layout.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('bundles/bionicuniversityhr/css/job.css') }}" type="text/css" media="all" />
+{% endblock %}
+
+{% block content %}
+    <h2 class="teacher">
+        <a href="/profile" class="teacher">Look for all teacher</a>
+    </h2>
+    <h2 class="teacher">
+        <a href="/schedule" class="teacher">Find your schedule</a>
+    </h2>
+{% endblock %}
+

@@ -1,0 +1,11 @@
+bionic_university_hr:
+    resource: "@BionicUniversityHRBundle/Resources/config/routing.yml"
+    prefix:   /
+bionic_university_profile:
+        resource: "@BionicUniversityHRBundle/Resources/config/routing/profile.yml"
+        prefix:   /profile
+bionic_university_schedule:
+        resource: "@BionicUniversityHRBundle/Resources/config/routing/schedule.yml"
+        prefix:   /schedule
+
+

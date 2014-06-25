@@ -1,0 +1,27 @@
+{% extends 'BionicUniversityHRBundle::layout.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('bundles/bionicuniversityhr/css/job.css') }}" type="text/css" media="all" />
+{% endblock %}
+
+{% block content %}
+
+        <h1>Profile edit</h1>
+
+        <p class="teacher">
+            {{ form(edit_form) }}
+        </p>
+
+        <ul class="record_actions">
+            <li>
+                <a href="{{ path('profile') }}" class="teacher">
+                    Back to the list
+                </a>
+            </li>
+            <li>{{ form(delete_form) }}</li>
+        </ul>
+{% endblock %}
+
+
+

@@ -1,0 +1,9 @@
+bionic_university_hr_homepage:
+    pattern:  /
+    defaults: { _controller: BionicUniversityHRBundle:Default:index }
+bionic_university_profile:
+        resource: "@BionicUniversityHRBundle/Resources/config/routing/profile.yml"
+        prefix:   /profile
+bionic_university_schedule:
+                resource: "@BionicUniversityHRBundle/Resources/config/routing/schedule.yml"
+                prefix:   /schedule

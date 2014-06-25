@@ -1,0 +1,17 @@
+{% extends 'BionicUniversityHRBundle::layout.html.twig' %}
+
+{% block content %}
+
+    <h1>Profile creation</h1>
+
+    {{ form(form) }}
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('profile') }}">
+            Back to the list
+        </a>
+    </li>
+</ul>
+{% endblock %}
+

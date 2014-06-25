@@ -1,0 +1,32 @@
+{% extends 'BionicUniversityHRBundle::layout.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('bundles/bionicuniversityhr/css/jobs.css') }}" type="text/css" media="all" />
+{% endblock %}
+
+
+{% block content %}
+    <h1>Profile list</h1>
+    <div id="jobs">
+        <table class="jobs">
+            {% for entity in entities %}
+                <tr class="{{ cycle(['even', 'odd'], loop.index) }}">
+                    <td class="location"><a href="{{ path('schedule_show', { 'id': entity.id }) }}">
+                            {{ entity.subject }} </a>
+                    </td>
+                    <td class="position">
+                        {{ entity.groups }}
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+        <ul>
+            <li>
+                <a href="{{ path('schedule_new') }}" class="teacher">
+                    Create a new entry
+                </a>
+            </li>
+        </ul>
+    </div>
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends 'BionicUniversityHRBundle::layout.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('bundles/bionicuniversityhr/css/jobs.css') }}" type="text/css" media="all" />
+{% endblock %}
+
+
+{% block content %}
+    <h1>Profile list</h1>
+    <div id="jobs">
+        <table class="jobs">
+            {% for entity in entities %}
+                <tr class="{{ cycle(['even', 'odd'], loop.index) }}">
+                    <td class="location"><a href="{{ path('profile_show', { 'id': entity.id, 'first_name': entity.firstname, 'second_name': entity.secondname}) }}">
+                            {{ entity.firstName }} {{ entity.secondName }} </a>
+                    </td>
+                    <td class="position">
+                        {{ entity.university }}
+                    </td>
+                    <td class="company">{{ entity.email }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+        <ul>
+            <li>
+                <a href="{{ path('profile_new') }}" class="teacher">
+                    Create a new entry
+                </a>
+            </li>
+            <!--<li>
+                <a href="{# {{ path('profile_new') }}"> #}
+                    Back to the list
+                </a>
+            </li>-->
+        </ul>
+    </div>
+{% endblock %}

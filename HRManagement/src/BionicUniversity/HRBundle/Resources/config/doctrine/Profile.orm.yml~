@@ -1,0 +1,54 @@
+BionicUniversity\HRBundle\Entity\Profile:
+    type: entity
+    table: profile
+    repositoryClass: BionicUniversity\HRBundle\Entity\ProfileRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        firstName:
+            type: string
+            length: '50'
+            column: First_Name
+        secondName:
+            type: string
+            length: '50'
+            column: Second_Name
+        city:
+            type: string
+            length: '60'
+            column: City
+        university:
+            type: string
+            length: '60'
+            column: University
+        faculty:
+            type: string
+            length: '60'
+            column: Faculty
+        skype:
+            type: string
+            length: 255
+            column: Skype
+        email:
+            type: string
+            length: 255
+            column: Email
+        mobilePhone:
+            type: integer
+            column: Mobile_Phone
+        birthday:
+            type: date
+            column: Birthday
+        aboutYou:
+            type: text
+            column: About_You
+	oneToMany:
+        schedule:
+            targetEntity: BionicUniversity\HRBundle\Entity\Schedule
+            mappedBy: profile
+
+    lifecycleCallbacks: {  }

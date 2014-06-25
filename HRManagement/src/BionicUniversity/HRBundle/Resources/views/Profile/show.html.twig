@@ -1,0 +1,51 @@
+{% extends 'BionicUniversityHRBundle::layout.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('bundles/bionicuniversityhr/css/job.css') }}" type="text/css" media="all" />
+{% endblock %}
+
+
+{% block content %}
+
+    <h1>{{ entity.firstName }}
+    {{ entity.SecondName }}</h1>
+
+{# комменатрий
+   {% if entity.photo %}
+        <div class="photo">
+            <a href="{{ entity.url }}">
+                <img src="/uploads/jobs/{{ entity.photo }}" />
+            </a>
+        </div>
+    {% endif %} #}
+
+    <div class="description">
+        <h2><strong>About You</strong></h2>
+        <p>  {{ entity.AboutYou }}</p>
+    </div>
+
+    <div class="personal_information">
+        <h2> <strong>Personal information</strong></h2>
+        <p> Education:  University - {{ entity.University }}, Faculty - {{ entity.faculty }}</p>
+        <p> Skype: {{ entity.Skype }}</p>
+        <p> Starting work in the university: {{ entity.Birthday|date('Y-m-d') }}</p>
+        <p> Mobile phone - {{ entity.MobilePhone }}</p>
+    </div>
+
+    <div style="padding: 20px 0">
+        <ul>
+            <li>
+                <a href="{{ path('profile_edit', { 'id': entity.id }) }}" class="teacher">
+                    Edit
+                </a>
+            </li>
+            <li>
+                <a href="{{ path('profile') }}" class="teacher">
+                    Back to the list
+                </a>
+            </li>
+        </ul>
+    </div>
+{% endblock %}
+

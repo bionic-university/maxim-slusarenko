@@ -1,0 +1,30 @@
+profile:
+    pattern:  /
+    defaults: { _controller: "BionicUniversityHRBundle:Profile:index" }
+
+profile_show:
+    pattern:  /{first_name}_{second_name}/{id}
+    defaults: { _controller: "BionicUniversityHRBundle:Profile:show" }
+
+profile_new:
+    pattern:  /new
+    defaults: { _controller: "BionicUniversityHRBundle:Profile:new" }
+
+profile_create:
+    pattern:  /create
+    defaults: { _controller: "BionicUniversityHRBundle:Profile:create" }
+    requirements: { _method: post }
+
+profile_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "BionicUniversityHRBundle:Profile:edit" }
+
+profile_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "BionicUniversityHRBundle:Profile:update" }
+    requirements: { _method: post|put }
+
+profile_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "BionicUniversityHRBundle:Profile:delete" }
+    requirements: { _method: post|delete }

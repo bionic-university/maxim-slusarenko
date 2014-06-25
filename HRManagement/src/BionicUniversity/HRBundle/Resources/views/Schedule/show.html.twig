@@ -1,0 +1,52 @@
+{% extends 'BionicUniversityHRBundle::layout.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('bundles/bionicuniversityhr/css/job.css') }}" type="text/css" media="all" />
+{% endblock %}
+
+
+{% block content %}
+
+    <h1>Schedule</h1>
+
+    <div class="description">
+        <h2><strong>Let's begin</strong></h2>
+        <table class="jobs">
+          <tr>
+            <td>
+                {{ entity.times|date('H:i:s') }}
+            </td>
+            <td>
+                 {{ entity.day|date('Y-m-d') }}
+            </td>
+            <td>
+                  {{ entity.subject }}
+            </td>
+            <td>
+                  {{ entity.groups }}
+            </td>
+            <td>
+                  {{ entity.type }}
+            </td>
+          </tr>
+        </table>
+    </div>
+
+    <div style="padding: 20px 0">
+        <ul>
+            <li>
+                <a href="{{ path('schedule_edit', { 'id': entity.id }) }}" class="teacher">
+                    Edit
+                </a>
+            </li>
+            <li>
+                <a href="{{ path('schedule') }}" class="teacher">
+                    Back to the list
+                </a>
+            </li>
+        </ul>
+    </div>
+
+{% endblock %}
+
